@@ -1,5 +1,8 @@
 import { OnInit } from '@angular/core';
+import { UsersService } from '../users.service';
 export declare class HelloComponent implements OnInit {
-    constructor();
+    private _usersService;
+    daUsers: Array<any>;
+    constructor(_usersService: UsersService);
     ngOnInit(): void;
 }

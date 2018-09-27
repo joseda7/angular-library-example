@@ -11,7 +11,7 @@ import { OtptestModule } from './otptest/otptest.module'
   ],
   imports: [
     BrowserModule,
-    OtptestModule
+    OtptestModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

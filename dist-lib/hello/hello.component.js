@@ -7,16 +7,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var core_1 = require("@angular/core");
+var users_service_1 = require("../users.service");
 var HelloComponent = /** @class */ (function () {
-    function HelloComponent() {
+    function HelloComponent(_usersService) {
+        this._usersService = _usersService;
     }
     HelloComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._usersService.getUsers().subscribe(function (result) {
+            console.log(result);
+            _this.daUsers = result;
+        }, function (error) {
+            var errorMsj = error;
+            console.log(errorMsj);
+        });
     };
     HelloComponent = __decorate([
         core_1.Component({
             selector: 'otptest-hello',
             templateUrl: './hello.component.html',
-            styleUrls: ['./hello.component.css']
+            styleUrls: ['./hello.component.css'],
+            providers: [users_service_1.UsersService]
         })
     ], HelloComponent);
     return HelloComponent;

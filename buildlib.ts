@@ -17,7 +17,7 @@ function createDeclarations() {
 function createPackageJson() {
   const packageJSON =  {
     "name": "otptest",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "How to build libraries with Angular (2, 4, 5...)",
     "main": "index.js",
     "scripts": {
